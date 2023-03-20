@@ -6,7 +6,7 @@
 /*   By: fgonzale <fgonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:58:16 by fgonzale          #+#    #+#             */
-/*   Updated: 2023/01/06 20:18:42 by fgonzale         ###   ########.fr       */
+/*   Updated: 2023/03/20 05:35:59 by fgonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <stdio.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE BUFSIZ
+# endif
 
 char	*get_next_line(int fd);
 int		ft_check_line(char *saved);
