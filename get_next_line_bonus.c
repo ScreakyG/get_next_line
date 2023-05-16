@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgonzale <fgonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:58:41 by fgonzale          #+#    #+#             */
-/*   Updated: 2023/01/06 20:29:43 by fgonzale         ###   ########.fr       */
+/*   Updated: 2023/05/16 22:47:14 by fgonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*find_next_line(char *saved, int fd)
 {
@@ -38,7 +38,7 @@ char	*find_next_line(char *saved, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[10000];
+	static char	*buffer[1024];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
