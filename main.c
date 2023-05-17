@@ -12,11 +12,10 @@ int	main(int argc, char **argv)
 		return (0);
 	(void)argc;
 	line = get_next_line(file1);
-	while (line)
-	{
-		printf("%s" ,line);
-		free(line);
-		line = get_next_line(file1);
-	}
+	printf("%s" ,line);
+	free(line);
 	close(file1);
+	line = get_next_line(file1);
+	printf("%s" ,line);
+	free(line);
 }

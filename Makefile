@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -Werror -Wextra -D BUFFER_SIZE=1000
+CFLAGS = -g -Wall -Werror -Wextra -D BUFFER_SIZE=10000000
 NAME = tester
 
 SRCS = get_next_line.c get_next_line_utils.c main.c

@@ -6,7 +6,7 @@
 /*   By: fgonzale <fgonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:58:41 by fgonzale          #+#    #+#             */
-/*   Updated: 2023/01/06 20:29:43 by fgonzale         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:28:13 by fgonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*find_next_line(char *saved, int fd)
 		if (readed_bytes == -1)
 		{
 			free(buffer);
+			if (saved)
+				free(saved);
 			return (NULL);
 		}
 		buffer[readed_bytes] = '\0';
